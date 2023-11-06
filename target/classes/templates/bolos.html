@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lojinha de Bolo</title>
+
+</head>
+<body>
+    <h1>Lista de Bolos</h1>
+<hr>
+    <table>
+        <thead>
+<hr>
+            <tr>
+                <th>Preço</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+         <tr th:each="bolo : ${bolos}" >
+             <td th:text="${bolo.preco}"></td>
+             <td th:text="${bolo.nome}"></td>
+             <td th:text="${bolo.desc}"></td>
+         </tr>
+        </tbody>
+    </table>
+
+<hr>
+</body>
+</html>
